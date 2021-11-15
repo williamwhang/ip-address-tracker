@@ -6,12 +6,12 @@ import Loader from "../components/Loader";
 import { toast } from "react-toastify";
 import Head from "next/head";
 
-const Map = dynamic(() => import("../components/Map"), { ssr: false });
+const Map = dynamic(() => import('../components/Map'), { ssr: false });
 
 export default function Home() {
   const [ipAddress, setIpAddress] = useState('');
   const [loading, setLoading] = useState(false);
-  const [results, setResult] = useState({});
+  const [results, setResults] = useState({});
 
   const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
